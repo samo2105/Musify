@@ -1,5 +1,8 @@
-<h1>New Playlist</h1>
-
+<div class="container">
+  <br>
+  <h1 class="text-center">New playlist</h1>
+  <br>
 <%= render 'form', playlist: @playlist %>
-
-<%= link_to 'Back', playlists_path %>
+  <br>
+<%= link_to 'Back', playlists_path, class: 'btn btn-success col-sm-4 float-left' %>
+</div>

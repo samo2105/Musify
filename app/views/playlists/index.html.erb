@@ -1,14 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<h1>Playlists</h1>
+<h1 class="text-center">Playlists</h1>
 
-<table>
-  <thead>
+  <%= link_to 'New Playlist', new_playlist_path, class:'btn btn-success col-sm-12' %>
+  <br>
+  <br>
+<table class="table">
+  <thead class="thead-dark">
     <tr>
-      <th>Name</th>
-      <th>User</th>
-      <th>Songs</th>
-      <th colspan="3"></th>
+      <th scope="col">Name</th>
+      <th scope="col">User</th>
+      <th scope="col">Songs</th>
+      <th scope="col" colspan="3"></th>
     </tr>
   </thead>
 
@@ -18,9 +21,9 @@
         <td><%= playlist.name %></td>
         <td><%= playlist.user.name %></td>
         <td><%= playlist.songs.count %></td>
-        <td><%= link_to 'Show', playlist %></td>
-        <td><%= link_to 'Edit', edit_playlist_path(playlist) %></td>
-        <td><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', playlist, class: 'btn btn-success' %></td>
+        <td><%= link_to 'Edit', edit_playlist_path(playlist), class: 'btn btn-warning' %></td>
+        <td><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +31,5 @@
 
 <br>
 
-<%= link_to 'New Playlist', new_playlist_path %>
+
+</div>

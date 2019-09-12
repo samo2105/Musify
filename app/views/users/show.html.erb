@@ -1,14 +1,19 @@
-<p id="notice"><%= notice %></p>
+<br>
+<div class="container">
 
-<p>
+<div class="card text-center">
+<h3>
   <strong>Name:</strong>
   <%= @user.name %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Email:</strong>
   <%= @user.email %>
-</p>
+</h3>
+</div>
+  <br>
+  <%= link_to 'Back', users_path, class:'btn btn-success col-sm-4' %>
+  <%= link_to 'Edit', edit_user_path(@user), class:'btn btn-warning float-right col-sm-4' %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+</div>
